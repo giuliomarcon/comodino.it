@@ -1,0 +1,18 @@
+#Classi java compilate
+/out/
+
+#Elementi os-dipendent, user-dipendent
+.idea/dataSources.local.xml
+.idea/workspace.xml
+.idea/uiDesigner.xml
+
+#File di configurazione
+**/config.properties
+.idea/deployment.xml
+.idea/dataSources/*
+.idea/dataSources.xml
+.idea/misc.xml
+
+# CUSTOM
+\.idea/webContexts\.xmlì
+.idea/inspectionProfiles/profiles_settings.xml
