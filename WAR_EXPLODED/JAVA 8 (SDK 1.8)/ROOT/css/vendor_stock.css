@@ -1,0 +1,32 @@
+body{
+    background-color: #F3F3F4 !important;
+    /*min-width:350px;
+    width: auto !important;
+    width:350px;*/
+}
+
+#stockRows > .stock {
+    padding: 10px 0 10px 0;
+    background-color: white;
+    border-radius: 8px;
+    margin: 10px -15px 10px -15px;
+    border: 1px solid gray;
+}
+
+.stockPhoto > a > img {
+    margin:0 auto;
+}
+
+@media screen and (max-width: 992px){
+    .stockPhoto > a > img {
+        margin-bottom: 20px;
+    }
+}
+
+.btnReviews   {
+    margin-top: 35px;
+}
+
+.stockPrice {
+    color: #9ecc24;
+}

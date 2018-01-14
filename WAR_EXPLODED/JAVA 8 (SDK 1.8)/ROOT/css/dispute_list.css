@@ -1,0 +1,101 @@
+.dispute{
+    box-shadow: 2px 3px 10px rgba(0,0,0,.15);
+    margin-top: 20px !important;
+    padding-top: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 1px;
+}
+
+.stelle{
+    padding-top: 10px;
+    padding-bottom: 18px;
+    color: white;
+}
+.card-signup .header {
+    padding: 15px 0;
+}
+.nav-tabs > li.active > a{
+    border-width: 2px !important;
+}
+.panel-default > .panel-heading{
+    background-color: #2c3e50 !important;
+    color: #FFF !important;
+}
+.panel-heading h5 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.margin-btn{
+    margin-top: 10px;
+}
+
+a.list-group-item:hover{
+    background-color: #FFF !important;
+    cursor: default;
+}
+
+li>img {
+    max-height: 10px !important;
+}
+
+.image-centre{
+    margin: auto;
+}
+
+.col-lg-2.col-md-3.col-xs-12.text-center {
+    padding-top: 65px !important;
+}
+
+a.list-group-item {
+    height:auto;
+    min-height: 210px;
+}
+
+a.list-group-item.active small {
+    color:#fff;
+}
+
+.stars {
+    margin:20px auto 1px;
+}
+
+#title {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+li.list-group-item{
+    padding: 0px;
+}
+
+body>.container {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.dispute .badge{
+    padding: 4px 8px;
+    text-transform: uppercase;
+    font-size: 0.600em;
+    line-height: 12px;
+    background-color: transparent;
+    border: 1px solid currentcolor;
+    margin-bottom: 5px;
+    border-radius: 1rem;
+}
+
+.badge-success {
+    border-color: #18ce0f;
+    color: #18ce0f;
+}
+
+.badge-warning {
+    border-color: #FFB236;
+    color: #FFB236;
+}
+
+.badge-danger {
+    border-color: #FF3636;
+    color: #FF3636;
+}

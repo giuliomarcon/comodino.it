@@ -1,0 +1,104 @@
+li.list-group-item .row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.stelle{
+    padding-top: 10px;
+    padding-bottom: 18px;
+    color: white;
+}
+
+.card-signup .header {
+    padding: 15px 0;
+}
+
+.nav-tabs > li.active > a{
+    border-width: 2px !important;
+}
+
+.panel-default > .panel-heading{
+    background-color: #2c3e50 !important;
+    color: #FFF !important;
+}
+
+.panel-heading h5 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.margin-btn{
+    margin-top: 10px;
+}
+
+a.list-group-item:hover{
+    background-color: #FFF !important;
+    cursor: default;
+}
+
+li.list-group-item img {
+    margin: auto;
+}
+
+li.list-group-item.active small {
+    color:#fff;
+}
+
+.stars {
+    margin:20px auto 1px;
+}
+
+#title {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+body>.container {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.resetcolor{
+    color: #2c3e50;
+}
+.resetcolor:hover{
+    color: #2c3e50;
+}
+.resetcolor:focus{
+    color: #2c3e50;
+}
+
+.prodreviewdispute{
+    border-top: 1px dashed #ecf0f1;
+}
+.prodbuttonscol{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.prodreviewdispute .badge{
+    padding: 4px 8px;
+    text-transform: uppercase;
+    font-size: 0.600em;
+    line-height: 12px;
+    background-color: transparent;
+    border: 1px solid currentcolor;
+    margin-bottom: 5px;
+    border-radius: 1rem;
+}
+
+.badge-success {
+    border-color: #18ce0f;
+    color: #18ce0f;
+}
+
+.badge-warning {
+    border-color: #FFB236;
+    color: #FFB236;
+}
+
+.badge-danger {
+    border-color: #FF3636;
+    color: #FF3636;
+}
+

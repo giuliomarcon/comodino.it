@@ -1,0 +1,21 @@
+#profile_pic{
+    max-height: 250px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.15);
+}
+@media (min-height: 768px) {
+    #profile_pic {
+        max-height: 350px;
+    }
+}
+body>.container{
+    background-color: #FFF;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    border-radius: 4px;
+}
+html{
+    background-color: #F3F3F4;
+}
+body{
+    background-color: #F3F3F4 !important;
+}

@@ -1,0 +1,58 @@
+h4{
+    font-size: 19px;
+}
+
+.main {
+    padding: 0 25px;
+    padding-bottom: 15px;
+    margin-top: 35px !important;
+    margin-bottom: 25px;
+}
+
+.display-1 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+body>.container{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+html{
+    background-color: #F3F3F4;
+}
+body{
+    background-color: #F3F3F4 !important;
+    /*margin-top: 80px;*/
+}
+
+.list-group-item {
+    box-shadow: 2px 2px 4px rgba(0,0,0,.05);
+}
+
+.cart-item {
+    background-color: #FFF !important;
+}
+
+.itemtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.itemseller {
+    margin-bottom: 5px;
+}
+
+.radio {
+	padding: 5px 0;
+	margin: 10px 0;
+}
+
+h3 {
+	margin: 0;
+}
+.payfield{
+    margin-top: 34px;
+}

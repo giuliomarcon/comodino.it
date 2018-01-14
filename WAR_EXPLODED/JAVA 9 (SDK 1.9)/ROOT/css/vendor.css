@@ -1,0 +1,286 @@
+body>.container{
+    padding-bottom: 30px !important;
+    border-radius: 4px;
+    background-color: transparent; 
+}
+html{
+    background-color: #F3F3F4;
+}
+body{
+    background-color: #F3F3F4 !important;
+
+    min-width:350px; /* suppose you want minimun width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width:350px;             /* As IE ignores !important it will set width as 1000px; */
+}
+
+#buttonPanel{
+    padding-bottom: 15px;
+}
+
+#navbar {
+    border-radius: 4px !important;
+    box-shadow: 0 2px 2px rgba(0,0,0,.15);
+}
+
+/* override my.css */
+h4 {
+    font-size: 100%;
+    line-height: 1em;
+    margin-top: -10px;
+}
+
+/* regole che vanno bene sempre */
+
+/* sotto i 992 pixel */
+
+@media screen and (max-width: 992px){
+
+    /* navbar */
+    
+    body > .container > .row > #navbar  {
+        background-color: white;
+        padding-top: 20px;
+    } 
+    
+    #navbar >.col-md-12  {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    #shopPhoto > img {
+        max-height: 250px;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    
+    #addShopDiv{
+        height: 75px;
+    }
+    #realShop {
+        float: left;
+    }
+    #btnAddShopLocation {
+        margin-top: 18px;
+        float:right;
+    }
+    
+    /* Pannello foto e modifica e bottoni VERDI */
+    
+    body > .container > .row > #mainContent {
+        margin-top: 25px;
+        
+    }
+    
+    body > .container > .row > #mainContent > #panelContainer {
+        padding-top: 20px;
+        border-radius: 4px;
+        background-color: white;
+    }
+    
+    #photoPanel > .col-md-12 > a  {
+        margin-bottom: 20px;
+    }
+    #photoPanel > .col-md-12 > a >img {
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    
+    #buttonPanel > .row >.col-md-6 >a {
+        margin-bottom: 10px;
+    }
+    
+    /* Prodotti in esaurimento */
+    
+    body > .container > .row > #mainContent > #productsLeftContainer  { /* ma se togliessi sta colonna? */
+        margin-top: 25px;
+        background-color: white;
+        border-radius: 4px;
+        padding: 0 40px 15px 40px;
+    }
+
+    #productsLeftContainer >.col-md-12 >.row > #shopTitle {
+        font-size: 200%;
+        text-align: center;
+    }
+    
+    .productRow {
+        margin-bottom: 10px;
+        background-color: #156486;
+        border-radius: 4px;
+        color: white;
+        position:relative;
+    }
+    
+    /*.productRow > .col-md-10 >.row {
+        position: relative;
+    }
+    .productRow > .col-md-10 >.row >.col-md-6 {
+        position: absolute;
+    }*/
+    
+    .itemsLeftDiv {
+        right: 0 !important;
+    }
+    
+    .productRow >.col-md-2 {
+        margin-top: 9px;
+    }
+}
+
+/* bugfix del button "aggiungi negozio fisico" */
+
+@media screen and (max-width: 525px){
+    
+    #addShopDiv{
+        height: 140px;
+        text-align: center;
+    }
+    #realShop {
+        float: none;
+    }
+    #btnAddShopLocation {
+        margin-top: 10px;
+        float:none;
+    }
+    
+}
+
+/*sopra i 992 pixel */
+
+@media screen and (min-width: 992px){
+
+    body > .container > .row {
+        margin-left: -20px;
+    }
+
+    /* i due stili fondamentali */
+   
+    body > .container > .row, #panelContainer {
+        display: table;
+    }
+
+    body > .container > .row > [class*="col-"], #panelContainer > [class*="col-"]{
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+        
+    }
+    #panelContainer > #buttonPanel {
+        min-width: 350px;
+    }
+    
+    /* Nav bar */ 
+    
+    body > .container > .row > #navbar {
+        background-color: white;
+        /*border-radius: 8px;*/
+       /* height: 720px;*/
+        padding-left: 15px;
+    } 
+    
+    #navbar >.col-md-12  {
+        text-align: justify;
+        text-justify: inter-word;
+
+    }
+
+    #shopPhoto > img {
+        max-height: 150px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    #addShopDiv{
+        padding-left: 10px;
+    }
+    
+    #btnAddShopLocation {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    
+    /* Pannello foto e modifica */
+
+    #photoPanel {
+        background-color: white;
+        border-radius: 4px;
+        vertical-align: middle !important;
+        min-width: 200px;
+        box-shadow: 0 2px 2px rgba(0,0,0,.15);
+    }
+    
+    #photoPanel > .col-md-12 > a  {
+        margin-bottom: 20px;
+        /*padding-left:  4%;*/
+    }
+    #photoPanel > .col-md-12 > a >img {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    
+    /* Bottoni verdi */
+    
+    body > .container > .row > #mainContent > #panelContainer > #buttonPanel {
+        background-color: white;
+        padding: 30px;
+        border-radius: 4px;
+        vertical-align: middle;
+        box-shadow: 0 2px 2px rgba(0,0,0,.15);
+    }
+
+    /* Prodotti in esaurimento */
+    
+    body > .container > .row > #mainContent > #productsLeftContainer  { /* ma se togliessi sta colonna? */
+        margin-top: 35px;
+        background-color: white;
+        border-radius: 4px;
+        padding: 0 40px 15px 40px;
+        box-shadow: 0 2px 2px rgba(0,0,0,.15);
+    }
+
+    #productsLeftContainer >.col-md-12 >.row > #shopTitle {
+        font-size: 250%;
+    }
+    
+    .productRow {
+        margin-bottom: 10px;
+        background-color: #156486;
+        border-radius: 4px;
+        color: white;
+        position:relative;
+    }
+
+    .btnSee {
+        padding-top: 7px;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .btnSee {
+        padding: 0; !important;
+    }
+    .productRow {
+        padding-bottom: 10px; !important;
+    }
+}
+
+.carousel {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.addphyshop {
+    margin-top: 20px;
+}
+
+.btn-success {
+    text-align: center;
+}
+
+.pull-left {
+    margin-top: 1px;
+}

@@ -1,0 +1,41 @@
+#disputeList form{
+    margin: 0;
+}
+
+#disputeList .btn[data-toggle="salva"]{
+    margin-left: 3px;
+}
+
+#disputeList .btn{
+    padding: 0 15px;
+    height: 26px;
+    border-radius: 4px;
+}
+
+.table td.text {
+    max-width: 300px;
+}
+.table td.text span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}
+
+body>.container{
+    background-color: #FFF;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    border-radius: 4px;
+}
+
+.resetcolor{
+    color: #2c3e50;
+}
+.resetcolor:hover{
+    color: #2c3e50;
+}
+.resetcolor:focus{
+    color: #2c3e50;
+}

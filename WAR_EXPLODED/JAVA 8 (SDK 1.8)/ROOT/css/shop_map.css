@@ -1,0 +1,26 @@
+body>.container{
+    background-color: #FFF;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    border-radius: 4px;
+}
+html{
+    background-color: #F3F3F4;
+}
+body{
+    background-color: #F3F3F4 !important;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 50%; // Definisco l'aspect ratio
+  height: 0;
+  overflow: hidden;
+}
+.google-maps > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
