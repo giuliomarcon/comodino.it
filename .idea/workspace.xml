@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="comodino:war exploded" />
+      <artifact name="comodino:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aa7015c-9c39-4e2e-9d7a-adb33a7dbe65" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comodino.iml" afterPath="$PROJECT_DIR$/comodino.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/comodino_war/comodino_war.war" afterPath="$PROJECT_DIR$/out/artifacts/comodino_war/comodino_war.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/comodino_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/comodino_war.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -294,7 +294,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -617,12 +617,12 @@
       <workItem from="1515356099727" duration="50815000" />
       <workItem from="1515689048721" duration="56000" />
       <workItem from="1515874130148" duration="14119000" />
-      <workItem from="1515899591260" duration="1197000" />
+      <workItem from="1515899591260" duration="1501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271757000" />
+    <option name="totallyTimeSpent" value="272061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1083,7 +1083,14 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="javaee-facet-resources" />
+              <type id="jpa-descriptors" />
+              <type id="library" />
+              <type id="artifact" />
+            </show-content>
+          </artifact-editor>
           <last-edited>comodino:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
@@ -1138,6 +1145,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
