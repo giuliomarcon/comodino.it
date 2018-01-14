@@ -19,16 +19,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.16" level="application_server_libraries" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.16" level="application_server_libraries" />
     <orderEntry type="library" exported="" name="mysql-connector-java-8.0.7-dmr" level="project" />
     <orderEntry type="library" exported="" name="standard-1.1.2" level="project" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
-    <orderEntry type="library" name="java-string-similarity-1.0.0" level="project" />
-    <orderEntry type="library" name="urlrewritefilter-4.0.3" level="project" />
-    <orderEntry type="library" name="jquery" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
-    <orderEntry type="library" name="jquery" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" exported="" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" exported="" name="java-string-similarity-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="urlrewritefilter-4.0.3" level="project" />
+    <orderEntry type="library" exported="" name="jquery" level="application" />
+    <orderEntry type="library" exported="" name="bootstrap" level="application" />
+    <orderEntry type="library" exported="" name="jquery" level="application" />
+    <orderEntry type="library" exported="" name="bootstrap" level="application" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>

@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ecommerce@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="ecommerce">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <table id="6" parent="2" name="cart"/>
+    <table id="7" parent="2" name="category"/>
+    <table id="8" parent="2" name="dispute"/>
+    <table id="9" parent="2" name="disputenotification"/>
+    <table id="10" parent="2" name="disputereply"/>
+    <table id="11" parent="2" name="orderlist"/>
+    <table id="12" parent="2" name="orderprod"/>
+    <table id="13" parent="2" name="product"/>
+    <table id="14" parent="2" name="productphoto"/>
+    <table id="15" parent="2" name="productreview"/>
+    <table id="16" parent="2" name="productreviewnotification"/>
+    <table id="17" parent="2" name="reviewreply"/>
+    <table id="18" parent="2" name="shippingaddress"/>
+    <table id="19" parent="2" name="shop"/>
+    <table id="20" parent="2" name="shopinfo"/>
+    <table id="21" parent="2" name="shopphoto"/>
+    <table id="22" parent="2" name="shopproduct"/>
+    <table id="23" parent="2" name="shopreview"/>
+    <table id="24" parent="2" name="shopreviewnotification"/>
+    <table id="25" parent="2" name="user"/>
+    <table id="26" parent="2" name="userpayment"/>
+    <table id="27" parent="2" name="userphoto"/>
+    <table id="28" parent="2" name="usershop"/>
+    <column id="29" parent="6" name="Quantity">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="6" name="AddDate">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="31" parent="6" name="UserID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="6" name="ProductID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="6" name="ShopID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="6" name="AddressID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="35" parent="6" name="ProductID">
+      <ColNames>ProductID
+ShopID</ColNames>
+    </index>
+    <key id="36" parent="6" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UserID
+ProductID
+ShopID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="37" parent="6" name="cart_ibfk_1">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+    </foreign-key>
+    <foreign-key id="38" parent="6" name="cart_ibfk_2">
+      <ColNames>ProductID
+ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shopproduct</RefTableName>
+      <RefColNames>ProductID
+ShopID</RefColNames>
+    </foreign-key>
+    <column id="39" parent="7" name="CategoryName">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="40" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CategoryName</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="8" name="Title">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="8" name="Status">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="8" name="Description">
+      <Position>3</Position>
+      <DataType>varchar(500)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="8" name="CreationDate">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="45" parent="8" name="OrderID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="8" name="ProductID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="8" name="ShopID">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="8" name="AdminStatus">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="49" parent="8" name="ShopStatus">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="50" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>OrderID
+ProductID
+ShopID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="51" parent="8" name="dispute_ibfk_1">
+      <ColNames>OrderID
+ProductID
+ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>orderprod</RefTableName>
+      <RefColNames>OrderID
+ProductID
+ShopID</RefColNames>
+    </foreign-key>
+    <column id="52" parent="9" name="OrderID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="9" name="ProductID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="9" name="ShopID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="9" name="AdminStatus">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="9" name="ShopStatus">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="9" name="CreationDate">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="58" parent="9" name="Title">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="59" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>OrderID
+ProductID
+ShopID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="60" parent="9" name="disputenotification_ibfk_1">
+      <ColNames>OrderID
+ProductID
+ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>dispute</RefTableName>
+      <RefColNames>OrderID
+ProductID
+ShopID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="61" parent="10" name="Description">
+      <Position>1</Position>
+      <DataType>varchar(500)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="10" name="OrderID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="10" name="ProductID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="10" name="ShopID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="65" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>OrderID
+ProductID
+ShopID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="66" parent="10" name="disputereply_ibfk_1">
+      <ColNames>OrderID
+ProductID
+ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>dispute</RefTableName>
+      <RefColNames>OrderID
+ProductID
+ShopID</RefColNames>
+    </foreign-key>
+    <column id="67" parent="11" name="OrderID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="68" parent="11" name="Date">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="69" parent="11" name="UserID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="11" name="PaymentID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="71" parent="11" name="UserID">
+      <ColNames>UserID</ColNames>
+    </index>
+    <index id="72" parent="11" name="orderlist_userpayment_PaymentID_fk">
+      <ColNames>PaymentID</ColNames>
+    </index>
+    <key id="73" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>OrderID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="74" parent="11" name="orderlist_ibfk_1">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+    </foreign-key>
+    <foreign-key id="75" parent="11" name="orderlist_userpayment_PaymentID_fk">
+      <ColNames>PaymentID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>userpayment</RefTableName>
+      <RefColNames>PaymentID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="76" parent="12" name="OrderID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="12" name="Status">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="78" parent="12" name="ProductID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="12" name="ShopID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="12" name="Quantity">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="12" name="FinalPrice">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="82" parent="12" name="AddressID">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="83" parent="12" name="AddressID">
+      <ColNames>AddressID</ColNames>
+    </index>
+    <index id="84" parent="12" name="ProductID">
+      <ColNames>ProductID
+ShopID</ColNames>
+    </index>
+    <key id="85" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>OrderID
+ProductID
+ShopID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="86" parent="12" name="orderprod_ibfk_1">
+      <ColNames>OrderID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>orderlist</RefTableName>
+      <RefColNames>OrderID</RefColNames>
+    </foreign-key>
+    <foreign-key id="87" parent="12" name="orderprod_ibfk_2">
+      <ColNames>ProductID
+ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shopproduct</RefTableName>
+      <RefColNames>ProductID
+ShopID</RefColNames>
+    </foreign-key>
+    <foreign-key id="88" parent="12" name="orderprod_ibfk_3">
+      <ColNames>AddressID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shippingaddress</RefTableName>
+      <RefColNames>AddressID</RefColNames>
+    </foreign-key>
+    <column id="89" parent="13" name="ProductID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="90" parent="13" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="13" name="Description">
+      <Position>3</Position>
+      <DataType>varchar(500)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="13" name="Rating">
+      <Position>4</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="13" name="CategoryName">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="94" parent="13" name="CategoryName">
+      <ColNames>CategoryName</ColNames>
+    </index>
+    <index id="95" parent="13" name="Name">
+      <ColNames>Name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="96" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ProductID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="97" parent="13" name="Name">
+      <ColNames>Name</ColNames>
+      <UnderlyingIndexName>Name</UnderlyingIndexName>
+    </key>
+    <foreign-key id="98" parent="13" name="product_ibfk_1">
+      <ColNames>CategoryName</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>category</RefTableName>
+      <RefColNames>CategoryName</RefColNames>
+    </foreign-key>
+    <column id="99" parent="14" name="PhotoID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="100" parent="14" name="Image">
+      <Position>2</Position>
+      <DataType>mediumblob|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="14" name="ProductID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="102" parent="14" name="ProductID">
+      <ColNames>ProductID</ColNames>
+    </index>
+    <key id="103" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PhotoID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="104" parent="14" name="productphoto_ibfk_1">
+      <ColNames>ProductID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>product</RefTableName>
+      <RefColNames>ProductID</RefColNames>
+    </foreign-key>
+    <column id="105" parent="15" name="ReviewID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="106" parent="15" name="Title">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="15" name="CreationDate">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="108" parent="15" name="Rating">
+      <Position>4</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="109" parent="15" name="Description">
+      <Position>5</Position>
+      <DataType>varchar(500)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="15" name="ProductID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="15" name="UserID">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="112" parent="15" name="ProductID">
+      <ColNames>ProductID</ColNames>
+    </index>
+    <index id="113" parent="15" name="UserID">
+      <ColNames>UserID</ColNames>
+    </index>
+    <key id="114" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ReviewID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="115" parent="15" name="productreview_ibfk_1">
+      <ColNames>ProductID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>product</RefTableName>
+      <RefColNames>ProductID</RefColNames>
+    </foreign-key>
+    <foreign-key id="116" parent="15" name="productreview_ibfk_2">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+    </foreign-key>
+    <column id="117" parent="16" name="ReviewID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="118" parent="16" name="ShopID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="119" parent="16" name="Title">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="16" name="ShopStatus">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="121" parent="16" name="CreationDate">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="122" parent="16" name="Rating">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="123" parent="16" name="productreviewnotification_ibfk_2">
+      <ColNames>ShopID</ColNames>
+    </index>
+    <key id="124" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ReviewID
+ShopID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="125" parent="16" name="productreviewnotification_ibfk_1">
+      <ColNames>ReviewID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>productreview</RefTableName>
+      <RefColNames>ReviewID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="126" parent="16" name="productreviewnotification_ibfk_2">
+      <ColNames>ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ShopID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="127" parent="17" name="Description">
+      <Position>1</Position>
+      <DataType>varchar(500)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="128" parent="17" name="ReviewID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="129" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ReviewID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="130" parent="17" name="reviewreply_ibfk_1">
+      <ColNames>ReviewID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>productreview</RefTableName>
+      <RefColNames>ReviewID</RefColNames>
+    </foreign-key>
+    <column id="131" parent="18" name="AddressID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="132" parent="18" name="UserID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="133" parent="18" name="Active">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="134" parent="18" name="Address">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="135" parent="18" name="FirstName">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="136" parent="18" name="LastName">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="137" parent="18" name="City">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="138" parent="18" name="ZIP">
+      <Position>8</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="139" parent="18" name="State">
+      <Position>9</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="140" parent="18" name="TelephoneNumber">
+      <Position>10</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="141" parent="18" name="UserID">
+      <ColNames>UserID</ColNames>
+    </index>
+    <key id="142" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>AddressID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="143" parent="18" name="shippingaddress_ibfk_1">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+    </foreign-key>
+    <column id="144" parent="19" name="ShopID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="145" parent="19" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="146" parent="19" name="Description">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="147" parent="19" name="Website">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="148" parent="19" name="Rating">
+      <Position>5</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="149" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ShopID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="150" parent="20" name="Latitude">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="151" parent="20" name="Longitude">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="152" parent="20" name="Address">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="153" parent="20" name="City">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="154" parent="20" name="State">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="155" parent="20" name="ZIP">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="156" parent="20" name="OpeningHours">
+      <Position>7</Position>
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="157" parent="20" name="ShopID">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="158" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ShopID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="159" parent="20" name="shopinfo_ibfk_1">
+      <ColNames>ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ShopID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="160" parent="21" name="PhotoID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="161" parent="21" name="Image">
+      <Position>2</Position>
+      <DataType>mediumblob|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="162" parent="21" name="ShopID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="163" parent="21" name="ShopID">
+      <ColNames>ShopID</ColNames>
+    </index>
+    <key id="164" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PhotoID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="165" parent="21" name="shopphoto_ibfk_1">
+      <ColNames>ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ShopID</RefColNames>
+    </foreign-key>
+    <column id="166" parent="22" name="Price">
+      <Position>1</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="167" parent="22" name="Quantity">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="168" parent="22" name="Discount">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="169" parent="22" name="ProductID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="170" parent="22" name="ShopID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="171" parent="22" name="shopproduct_ibfk_2">
+      <ColNames>ShopID</ColNames>
+    </index>
+    <key id="172" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ProductID
+ShopID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="173" parent="22" name="shopproduct_ibfk_1">
+      <ColNames>ProductID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>product</RefTableName>
+      <RefColNames>ProductID</RefColNames>
+    </foreign-key>
+    <foreign-key id="174" parent="22" name="shopproduct_ibfk_2">
+      <ColNames>ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ShopID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="175" parent="23" name="Title">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="176" parent="23" name="CreationDate">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="177" parent="23" name="Rating">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="178" parent="23" name="Description">
+      <Position>4</Position>
+      <DataType>varchar(500)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="179" parent="23" name="ShopID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="180" parent="23" name="UserID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="181" parent="23" name="UserID">
+      <ColNames>UserID</ColNames>
+    </index>
+    <key id="182" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ShopID
+UserID
+CreationDate</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="183" parent="23" name="shopreview_ibfk_1">
+      <ColNames>ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ShopID</RefColNames>
+    </foreign-key>
+    <foreign-key id="184" parent="23" name="shopreview_ibfk_2">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+    </foreign-key>
+    <column id="185" parent="24" name="ShopID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="186" parent="24" name="UserID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="187" parent="24" name="Title">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="188" parent="24" name="CreationDate">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="189" parent="24" name="ShopStatus">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="190" parent="24" name="Rating">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="191" parent="24" name="shopreviewnotification_user_UserID_fk">
+      <ColNames>UserID</ColNames>
+    </index>
+    <key id="192" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ShopID
+UserID
+CreationDate</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="193" parent="24" name="shopreviewnotification_shop_ShopID_fk">
+      <ColNames>ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ShopID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="194" parent="24" name="shopreviewnotification_user_UserID_fk">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="195" parent="25" name="UserID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="196" parent="25" name="FirstName">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="197" parent="25" name="LastName">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="198" parent="25" name="Email">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="199" parent="25" name="Password">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="200" parent="25" name="Type">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="201" parent="25" name="Privacy">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="202" parent="25" name="EmailConfirm">
+      <Position>8</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="203" parent="25" name="PasswordReset">
+      <Position>9</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="204" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UserID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="205" parent="26" name="PaymentID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="206" parent="26" name="UserID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="207" parent="26" name="CardHolder">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="208" parent="26" name="CardNumber">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="209" parent="26" name="ExpiryDate">
+      <Position>5</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="210" parent="26" name="Cvv">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="211" parent="26" name="userpayment_user_UserID_fk">
+      <ColNames>UserID</ColNames>
+    </index>
+    <key id="212" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PaymentID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="213" parent="26" name="userpayment_user_UserID_fk">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="214" parent="27" name="UserID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="215" parent="27" name="Image">
+      <Position>2</Position>
+      <DataType>mediumblob|0</DataType>
+    </column>
+    <key id="216" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UserID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="217" parent="27" name="userphoto_user_UserID_fk">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="218" parent="28" name="UserID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="219" parent="28" name="ShopID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="220" parent="28" name="ShopID">
+      <ColNames>ShopID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="221" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UserID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="222" parent="28" name="ShopID">
+      <ColNames>ShopID</ColNames>
+      <UnderlyingIndexName>ShopID</UnderlyingIndexName>
+    </key>
+    <foreign-key id="223" parent="28" name="usershop_ibfk_1">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>UserID</RefColNames>
+    </foreign-key>
+    <foreign-key id="224" parent="28" name="usershop_ibfk_2">
+      <ColNames>ShopID</ColNames>
+      <RefSchemaName>ecommerce</RefSchemaName>
+      <RefTableName>shop</RefTableName>
+      <RefColNames>ShopID</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
