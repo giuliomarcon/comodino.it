@@ -78,8 +78,7 @@ public class CompleteOrderServlet extends HttpServlet {
         System.out.println("[INFO] CompleteOrder: Controllo Superato");
 
         // Creazione pagamento
-
-        // TODO controllo sulla data della carta di credito che sia maggiore della data attuale
+        
         System.out.println("[INFO] CompleteOrder: Creazione pagamento");
         int paymentID = new PaymentDaoImpl().createPayment(user, cardHolderName, cardNumber, expiryMonth + "_" + expityYear, cvv);
 
